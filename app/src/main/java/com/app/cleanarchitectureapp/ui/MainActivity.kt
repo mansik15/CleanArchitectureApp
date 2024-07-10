@@ -8,6 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.app.cleanarchitectureapp.R
 import com.app.cleanarchitectureapp.databinding.ActivityMainBinding
+import com.google.gson.Gson
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -28,6 +29,8 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.countries.observe(this) {
 
+            //print response log
+            println(Gson().toJson(it))
         }
     }
 }
