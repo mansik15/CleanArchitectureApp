@@ -1,4 +1,4 @@
-package com.app.cleanarchitectureapp.ui
+package com.app.cleanarchitectureapp.presentation.ui
 
 import android.content.Context
 import android.view.LayoutInflater

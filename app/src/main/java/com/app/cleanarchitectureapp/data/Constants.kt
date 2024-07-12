@@ -1,4 +1,4 @@
-package com.app.cleanarchitectureapp.network
+package com.app.cleanarchitectureapp.data
 
 object Constants {
     const val BASE_URL = "https://countriesnow.space/api/v0.1/"

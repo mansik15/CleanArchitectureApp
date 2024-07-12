@@ -1,7 +1,6 @@
-package com.app.cleanarchitectureapp.network
+package com.app.cleanarchitectureapp.data
 
-import com.app.cleanarchitectureapp.data.CountriesRepository
-import com.app.cleanarchitectureapp.network.Constants.BASE_URL
+import com.app.cleanarchitectureapp.data.Constants.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

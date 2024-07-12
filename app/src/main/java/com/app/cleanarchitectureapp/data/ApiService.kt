@@ -1,7 +1,7 @@
-package com.app.cleanarchitectureapp.network
+package com.app.cleanarchitectureapp.data
 
 import com.app.cleanarchitectureapp.data.model.CountryResponse
-import com.app.cleanarchitectureapp.network.Constants.COUNTY_ENDPOINT
+import com.app.cleanarchitectureapp.data.Constants.COUNTY_ENDPOINT
 import retrofit2.http.GET
 
 interface ApiService {
