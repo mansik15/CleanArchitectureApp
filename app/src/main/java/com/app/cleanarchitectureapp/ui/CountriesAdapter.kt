@@ -7,21 +7,23 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.app.cleanarchitectureapp.R
-import com.app.cleanarchitectureapp.data.model.CountryData
 
-class CountriesAdapter(val mContex: Context, val mCountries: List<CountryData>): RecyclerView.Adapter<CountriesAdapter.MyViewHolder>() {
-    class MyViewHolder(private val view: View) :
-        RecyclerView.ViewHolder(view)  {
+class CountriesAdapter(val mContex: Context, val mCountries: List<String>) :
+    RecyclerView.Adapter<CountriesAdapter.MyViewHolder>() {
+    class MyViewHolder(view: View) :
+        RecyclerView.ViewHolder(view) {
         val tvCountryName: TextView = itemView.findViewById(R.id.tvName)
     }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ) = MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.row_country, parent, false))
+    ) = MyViewHolder(
+        LayoutInflater.from(parent.context).inflate(R.layout.row_country, parent, false)
+    )
 
-    override fun onBindViewHolder(holder: CountriesAdapter.MyViewHolder, position: Int) {
-        holder.tvCountryName.text = mCountries[position].country
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        holder.tvCountryName.text = mCountries[position]
     }
 
     override fun getItemCount(): Int {

@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity() {
         binding.rvCountries.layoutManager = LinearLayoutManager(this)
         viewModel.countries.observe(this) {
             //print response log
-            println(Gson().toJson(it.data))
-            binding.rvCountries.adapter = CountriesAdapter(this@MainActivity, it.data)
+            println(Gson().toJson(it.countryList))
+            binding.rvCountries.adapter = CountriesAdapter(this@MainActivity, it.countryList)
         }
     }
 }
