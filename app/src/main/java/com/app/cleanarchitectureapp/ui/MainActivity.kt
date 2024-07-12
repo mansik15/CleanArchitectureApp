@@ -6,6 +6,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.cleanarchitectureapp.R
 import com.app.cleanarchitectureapp.databinding.ActivityMainBinding
 import com.google.gson.Gson
@@ -27,10 +28,11 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        binding.rvCountries.layoutManager = LinearLayoutManager(this)
         viewModel.countries.observe(this) {
-
             //print response log
-            println(Gson().toJson(it))
+            println(Gson().toJson(it.data))
+            binding.rvCountries.adapter = CountriesAdapter(this@MainActivity, it.data)
         }
     }
 }
