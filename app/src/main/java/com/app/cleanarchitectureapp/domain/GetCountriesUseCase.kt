@@ -11,6 +11,8 @@ class GetCountriesUseCase @Inject constructor(private val repository: CountriesR
         return repository.getCountries().toDomain()
     }
 
+    // converting CountryResponse to CountryDomainModel
+    // It will map CountryData class in CountryResponse to countryList in domain model & fetch string of country name
     fun CountryResponse.toDomain(): CountryDomainModel {
         return CountryDomainModel(countryList = data.map {
             it.country
