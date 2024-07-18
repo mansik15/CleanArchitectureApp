@@ -1,4 +1,4 @@
-package com.app.cleanarchitectureapp.data
+package com.app.cleanarchitectureapp.data.remote
 
 import com.app.cleanarchitectureapp.data.model.CountryResponse
 import com.app.cleanarchitectureapp.data.Constants.COUNTY_ENDPOINT

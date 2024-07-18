@@ -1,6 +1,7 @@
-package com.app.cleanarchitectureapp.data
+package com.app.cleanarchitectureapp.data.remote
 
 import com.app.cleanarchitectureapp.data.Constants.BASE_URL
+import com.app.cleanarchitectureapp.data.CountriesRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
