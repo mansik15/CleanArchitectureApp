@@ -1,8 +1,8 @@
-package com.app.cleanarchitectureapp.domain
+package com.app.cleanarchitectureapp.domain.usecases
 
 import com.app.cleanarchitectureapp.data.CountriesRepository
 import com.app.cleanarchitectureapp.data.model.CountryResponse
-import com.app.cleanarchitectureapp.domain.model.CountryDomainModel
+import com.app.cleanarchitectureapp.domain.entity.CountryDomainModel
 import javax.inject.Inject
 
 class GetCountriesUseCase @Inject constructor(private val repository: CountriesRepository) {
